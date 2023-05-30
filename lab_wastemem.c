@@ -40,7 +40,7 @@ int main(int argc, char **argv){
 
     signal(SIGALRM, quit_on_timeout);
     printf("Will quite in QUITE_TIME seconds if no normal termination\n");
-    alarm(QUIT_TIME)
+    alarm(QUIT_TIME);
 
     for(j=0; j<=m;j+=BS){
         /*This is a memory leak, no free*/
@@ -54,6 +54,6 @@ int main(int argc, char **argv){
     printf("\n\n    Sleeping for 5 seconds\n");
     sleep(5);
     printf("\n\n    Quitting and releasing memory\n");
-    exit(EXIT_SUCCESS)
+    exit(EXIT_SUCCESS);
 
 }
